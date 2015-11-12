@@ -1,5 +1,12 @@
 from django.shortcuts import render
 
+from socialapp.models import UserPost
+
 
 def index(request):
-    return render(request, 'index.html')
+    if request.method == 'GET':
+        posts = UserPost.objects.all()
+        context = {
+            'posts': posts,
+        }
+        return render(request, 'index.html', context)
