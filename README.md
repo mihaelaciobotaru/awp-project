@@ -24,7 +24,7 @@ Project installation
 1. Clone repository:
 
   ```
-  git clone git@github.com:iuliachiriac/awp-project.git
+  git clone https://github.com/iuliachiriac/awp-project.git
   ```
   
 1. Create virtual environment:
