@@ -15,7 +15,7 @@
         <hr>
         <p>{{ post.author }}</p>
         <p>{{ post.date_added }}</p>
-        <p>{{ post.text }}</p>
+        <p>{{ post.text | slice:":15" }} ... </p>
       </div>
     {% endfor %}
   </body>

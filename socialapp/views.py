@@ -6,7 +6,7 @@ from socialapp.forms import UserPostForm
 
 def index(request):
     if request.method == 'GET':
-        posts = UserPost.objects.all()
+        posts = UserPost.objects.order_by('-date_added')
         form = UserPostForm()
         context = {
             'posts': posts,
