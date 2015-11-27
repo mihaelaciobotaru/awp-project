@@ -15,7 +15,10 @@
         <hr>
         <p>{{ post.author }}</p>
         <p>{{ post.date_added }}</p>
-        <p>{{ post.text | slice:":15" }} ... </p>
+        <p>
+          {{ post.text | slice:":15" }} ...
+          <a href="{% url 'post_details' post.pk %}">See more</a>
+        </p>
       </div>
     {% endfor %}
   </body>

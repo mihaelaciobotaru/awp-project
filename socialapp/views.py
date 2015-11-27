@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 
 from socialapp.models import UserPost
 from socialapp.forms import UserPostForm
@@ -20,3 +21,7 @@ def index(request):
             user_post = UserPost(text=text)
             user_post.save()
         return redirect('index')
+
+
+def post_details(request, pk):
+    return HttpResponse('Success!')
