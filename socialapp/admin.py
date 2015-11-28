@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from socialapp.models import UserPost
+from socialapp import models
 
 
-admin.site.register(UserPost)
+admin.site.register(models.UserPost)
+admin.site.register(models.UserPostComment)
