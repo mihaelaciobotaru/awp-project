@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 
 from socialapp.models import UserPost
 from socialapp.forms import UserPostForm
@@ -24,4 +23,6 @@ def index(request):
 
 
 def post_details(request, pk):
-    return HttpResponse('Success!')
+    post = UserPost.objects.get(pk=pk)
+    context = {'post': post}
+    return render(request, 'post_details.html', context)
